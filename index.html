@@ -81,8 +81,11 @@
 			<div class="image">
 				<img src="images/img-assignatures.jpg" alt="" />
 			</div>
+			<div id="sticky_btn_form">
+				<a href="#formulari" class="button primary fit"> Avís Preinscripció </a>
+			</div>
 		</section>
-
+		
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 			<div class="content">
 				<h2>Camp Professional</h2>
@@ -170,7 +173,7 @@
 
 		<!-- FORMULARI -->
 		<section class="wrapper style1 align-center">
-			<div class="inner medium">
+			<div class="inner medium" id="formulari">
 				<h2>Avís preinscripcions</h2>
 				<form>
 					<div class="fields">
@@ -245,6 +248,17 @@
 				'success'
 			);
 		});
+
+		var sticker = document.getElementById("sticky_btn_form");
+		function removeSticker(){
+			sticker.classList.remove("sticky");
+		}
+		window.onload  = removeSticker;
+		window.onscroll = function(){
+			sticker.classList.add("sticky") ;
+		}
+		sticker.addEventListener('click', removeSticker);
+		
 	</script>
 
 </body>

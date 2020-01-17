@@ -37,6 +37,18 @@ ol, ul {
 	list-style: none;
 }
 
+#sticky_btn_form{
+	align-content: right;
+	text-align: right;
+}
+
+
+.sticky {
+	position: fixed;
+	bottom: 0;	
+	width: 100%;
+}
+
 blockquote, q {
 	quotes: none;
 }
