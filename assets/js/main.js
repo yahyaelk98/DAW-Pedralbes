@@ -4,6 +4,26 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+$('#enviar').click(function () {
+	Swal.fire(
+		'Dades enviades!',
+		'T\'avisarem el més aviat possible!',
+		'success'
+	);
+});
+
+var sticker = document.getElementById("sticky_btn_form");
+function removeSticker(){
+	sticker.classList.remove("sticky");
+}
+window.onload  = removeSticker;
+window.onscroll = function(){
+	sticker.classList.add("sticky") ;
+}
+sticker.addEventListener('click', removeSticker);
+
+
+
 (function($) {
 
 	var	$window = $(window),
